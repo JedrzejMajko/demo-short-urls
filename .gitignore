@@ -3,3 +3,4 @@ node_modules
 .env
 db/dev.db
 docker-compose.override.yml
+dist
