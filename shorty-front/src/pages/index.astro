@@ -1,0 +1,13 @@
+---
+import FormBox from "../components/FormBox.astro";
+import Form from "../components/Form.tsx";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="h-full flex flex-wrap justify-center content-center">
+    <FormBox title="URL Shortener">
+      <Form client:load />
+    </FormBox>
+  </div>
+</Layout>

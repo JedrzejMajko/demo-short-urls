@@ -1,0 +1,26 @@
+
+networks:
+  shorty:
+
+services:
+  web:
+    build:
+      dockerfile: docker/web.dockerfile
+      context: .
+    networks:
+      - shorty
+    env_file:
+      - shorty-front/.env
+    depends_on:
+      - api
+
+  api:
+    build:
+      dockerfile: docker/api.dockerfile
+    networks:
+      - shorty
+    env_file:
+      - shorty-api/.env
+
+volumes:
+  database:

@@ -1,0 +1,11 @@
+services:
+  api:
+    ports:
+      - "127.0.0.1:9051:3000"
+    volumes:
+      - database:/var/www/html/db
+  web:
+    ports:
+      - "127.0.0.1:9052:8080"
+
+
